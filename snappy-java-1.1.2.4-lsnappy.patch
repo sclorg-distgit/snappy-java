@@ -1,0 +1,12 @@
+diff -Nru snappy-java-1.1.2.4/Makefile.common snappy-java-1.1.2.4.lsnappy/Makefile.common
+--- snappy-java-1.1.2.4/Makefile.common	2017-02-09 15:23:47.709144160 +0100
++++ snappy-java-1.1.2.4.lsnappy/Makefile.common	2017-02-09 15:23:20.871663023 +0100
+@@ -81,7 +81,7 @@
+ Linux_CXX          := g++
+ Linux_STRIP        := strip
+ Linux_CXXFLAGS     := -I$(JAVA_HOME)/include $(CXXFLAGS) -fPIC -fvisibility=hidden
+-Linux_LINKFLAGS    := -shared -static-libgcc -static-libstdc++ 
++Linux_LINKFLAGS    := -shared -lsnappy -static-libgcc -static-libstdc++
+ Linux_LIBNAME      := libsnappyjava.so
+ Linux_SNAPPY_FLAGS :=
+ 
